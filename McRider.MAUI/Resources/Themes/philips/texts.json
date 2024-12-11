@@ -1,8 +1,8 @@
 {
   "TitleColor": "#ffffff",
-  "PrimaryColor": "#0879bf",
+  "PrimaryColor": "#00a4bd",
   "TertiaryColor": "#000000",
-  "GamesTitle": "Lorem ipsum dolor sit amet, consectetuer",
-  "LoadingTitle": "Loading philips challenge.",
-  "LandingTitle": "Lorem ipsum dolor sit amet, consectetuer"
+  "GamesTitle": "Are you ready to take on the distance reward challenge ?",
+  "LoadingTitle": "Can You Win Under A Minute ?",
+  "LandingTitle": "Can You Win Under A Minute ? "
 }

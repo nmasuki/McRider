@@ -18,7 +18,7 @@
         <Image Grid.Row="0" Source="{Binding Theme.HeaderImage}" Aspect="AspectFit"/>
         <Image Grid.Row="2" Source="{Binding Theme.FooterImage}" Aspect="AspectFit"/>
 
-        <ScrollView Grid.Row="1" BackgroundColor="{StaticResource Tertiary}" Margin="25,0" >
+        <ScrollView Grid.Row="1" BackgroundColor="#533f90" Margin="25,0" >
             <Grid Padding="80,180,80,80">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -29,9 +29,14 @@
                     <Image Source="{Binding Theme.Clock2Image}"/>
                     <controls:PieChart StartAngle="90" HeightRequest="310" WidthRequest="310" Margin="0,70,0,0" Thickness="154">
                         <controls:PieChart.Data>
-                            <controls:PieChartData Label="Progress" Value="{Binding PercentageTimeProgress}" BackgroundColor="{Binding Theme.PrimaryColor}"/>
+                            <controls:PieChartData Label="Progress" Value="{Binding PercentageTimeProgress}" BackgroundColor="#533f90"/>
                         </controls:PieChart.Data>
                     </controls:PieChart>
+                    <!-- New Label with text "59" -->
+                    <Label Text="{Binding Player1Entry.Time, StringFormat='{0:ss} '}" 
+                           FontSize="100" Padding="0,70,0,0"  FontFamily="MontserratBold" TextColor="White" 
+                           HorizontalOptions="Center" VerticalOptions="Center"/>
+
                     <Label Text="{Binding CountDown}" FontSize="100" Padding="0,70,0,0" FontFamily="MontserratBold"
                        TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"
                        IsVisible="{Binding ShowCountDown}">
@@ -61,11 +66,11 @@
                     <Label Grid.Column="0" Grid.Row="0" Text="{Binding Matchup.Player1.Nickname}" 
                        FontFamily="MontserratBold" 
                        HorizontalTextAlignment="Center" FontSize="30" 
-                       TextColor="{Binding Theme.PrimaryColor}"/>
+                       TextColor="White"/>
 
                     <Label Grid.Column="2" Grid.Row="0" Text="{Binding Matchup.Player2.Nickname}" 
                        FontFamily="MontserratBold" HorizontalTextAlignment="Center" FontSize="30"
-                       IsVisible="{Binding IsMultiplePlayers}" TextColor="{Binding Theme.PrimaryColor}"/>
+                       IsVisible="{Binding IsMultiplePlayers}" TextColor="White"/>
 
                     <Grid Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center" Margin="50,0" HeightRequest="580">
                         <Grid.RowDefinitions>
@@ -84,28 +89,28 @@
                         <Label Grid.Row="1" Text="{Binding Player1Progress, StringFormat='{0:0}%'}" 
                            FontFamily="MontserratBold" 
                            HorizontalTextAlignment="Center" Margin="20,0" FontSize="40" 
-                           TextColor="{Binding Theme.PrimaryColor}">
+                           TextColor="White">
                             <Label.Triggers>
                                 <DataTrigger TargetType="Label" Binding="{Binding Player1Progress}" Value="0">
                                     <Setter Property="IsVisible" Value="False"/>
                                 </DataTrigger>
                             </Label.Triggers>
                         </Label>
-                        <Grid Grid.Row="1" BackgroundColor="Black" IsVisible="{Binding ShowHorizontalProgress}">
+                        <Grid Grid.Row="1" BackgroundColor="#533f90" IsVisible="{Binding ShowHorizontalProgress}">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Label Grid.Row="0" Text="Time" FontSize="24" Margin="20,0" />
-                            <Label Grid.Row="0" Text="{Binding Player1Entry.Time, StringFormat='{0:mm\\:ss} mins'}" 
+                            <Label Grid.Row="0" Text="{Binding Player1Entry.Time, StringFormat='{0:mm\\:ss} s'}" 
                                    FontSize="24" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"
-                                   Margin="20,0"  BackgroundColor="Black"  MinimumWidthRequest="130" />
+                                   Margin="20,0"  BackgroundColor="#533f90"  MinimumWidthRequest="130" />
                             <Label Grid.Row="1" Text="Distance" FontSize="24" Margin="20,0" />
                             <Label Grid.Row="1" Text="{Binding Player1Entry.Distance, StringFormat='{0:#,##0.00} m'}" 
                                    FontSize="24" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"
-                                   Margin="20,0"  BackgroundColor="Black"  MinimumWidthRequest="130"/>
-                            <ProgressBar Grid.Row="2" Progress="{Binding Player1ProgressF}" ProgressColor="{Binding Theme.PrimaryColor}" ScaleY="5" />
+                                   Margin="20,0"  BackgroundColor="#533f90"  MinimumWidthRequest="130"/>
+                            <ProgressBar Grid.Row="2" Progress="{Binding Player1ProgressF}" ProgressColor="#e54417" ScaleY="5" />
                         </Grid>
                     </Grid>
 
@@ -127,21 +132,21 @@
                         <Label Grid.Row="1" Text="{Binding Player2Progress, StringFormat='{0:0}%'}" 
                            FontFamily="MontserratBold" 
                            HorizontalTextAlignment="Center" Margin="20,0" FontSize="40" 
-                           TextColor="{Binding Theme.PrimaryColor}">
+                           TextColor="white">
                             <Label.Triggers>
                                 <DataTrigger TargetType="Label" Binding="{Binding Player2Progress}" Value="0">
                                     <Setter Property="IsVisible" Value="False"/>
                                 </DataTrigger>
                             </Label.Triggers>
                         </Label>
-                        <Grid Grid.Row="1" BackgroundColor="Black" IsVisible="{Binding ShowHorizontalProgress}">
+                        <Grid Grid.Row="1" BackgroundColor="#533f90" IsVisible="{Binding ShowHorizontalProgress}">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Label Grid.Row="0" Text="Time" FontSize="24" Margin="20,0" />
-                            <Label Grid.Row="0" Text="{Binding Player2Entry.Time, StringFormat='{0:mm\\:ss} mins'}" 
+                            <Label Grid.Row="0" Text="{Binding Player2Entry.Time, StringFormat='{0:mm\\:ss} s'}" 
                                    FontSize="24" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"
                                    Margin="20,0"  BackgroundColor="Black"  MinimumWidthRequest="130" />
                             <Label Grid.Row="1" Text="Distance" FontSize="24" Margin="20,0" />
@@ -182,7 +187,7 @@
                 <Frame Grid.RowSpan="2" WidthRequest="800" 
                    Margin="0,-550,0,0" 
                    HorizontalOptions="Center" VerticalOptions="Center"
-                   BackgroundColor="Black"
+                   BackgroundColor="white"
                    BorderColor="White" IsVisible="{Binding ShowResults}">
                     <Grid ColumnSpacing="0">
                         <Grid.ColumnDefinitions>

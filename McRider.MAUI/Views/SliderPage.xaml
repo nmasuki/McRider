@@ -16,7 +16,7 @@
         <Image Grid.Row="0" Source="{Binding Theme.HeaderImage}" Aspect="AspectFit"/>
         <Image Grid.Row="2" Source="{Binding Theme.FooterImage}" Aspect="AspectFit"/>
 
-        <Grid Grid.Row="1"  BackgroundColor="{StaticResource Tertiary}" Margin="25,0" Padding="80">
+        <Grid Grid.Row="1"  BackgroundColor="#00a4bd" Margin="25,0" Padding="80">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="300"/>
@@ -44,8 +44,8 @@
                     Padding="80,20" FontSize="40" FontFamily="MontserratBold" CornerRadius="50" Margin="10,10,10,100"/>
 
                 <IndicatorView x:Name="indicatorView"
-                   IndicatorColor="{StaticResource PrimaryDark}"
-                   SelectedIndicatorColor="{StaticResource Primary}"
+                   IndicatorColor="#e54417"
+                   SelectedIndicatorColor="White"
                    HorizontalOptions="Center" />
             </StackLayout>
         </Grid>

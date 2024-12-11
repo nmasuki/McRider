@@ -19,7 +19,7 @@
         <Image Grid.Row="0" Source="{Binding Theme.HeaderImage}" Aspect="AspectFit"/>
         <Image Grid.Row="2" Source="{Binding Theme.FooterImage}" Aspect="AspectFit"/>
 
-        <ScrollView Grid.Row="1" BackgroundColor="{Binding Theme.PrimaryColor}" Margin="25,0">
+        <ScrollView Grid.Row="1" BackgroundColor="#00a4bd" Margin="25,0">
             <Grid Grid.Row="0"   Margin="0" Padding="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="300"/>

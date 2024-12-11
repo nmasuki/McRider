@@ -6,7 +6,7 @@
     
     Shell.NavBarIsVisible="False"
     Shell.FlyoutBehavior="Disabled">
-    <Grid BackgroundColor="{StaticResource White}">
+    <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="120" />
             <RowDefinition Height="*" />
@@ -37,13 +37,13 @@
 
             <StackLayout Grid.Row="1" Margin="40">
                 <Button Text="Take the challenge" Command="{Binding TakeChallengeCommand}"
-                    BackgroundColor="{Binding Theme.TertiaryColor}" TextColor="White"
+                    BackgroundColor="#e54417" TextColor="White"
                     HorizontalOptions="Center"
                     Padding="80,20" FontSize="35" FontFamily="MontserratBold" CornerRadius="40" />
 
                 <Button Text="Resume incomplete challenge" Command="{Binding ResumeTournamentCommand}"
                     IsVisible="{Binding HasIncompleteTournament}"
-                    BackgroundColor="{Binding Theme.TertiaryColor}" TextColor="White"
+                    BackgroundColor="#e54417" TextColor="White"
                     HorizontalOptions="Center" 
                     Padding="80,20" Margin="10" FontSize="35" FontFamily="MontserratBold" CornerRadius="40" />
             </StackLayout>

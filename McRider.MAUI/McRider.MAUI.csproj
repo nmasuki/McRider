@@ -81,26 +81,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Themes\absa\card.png" />
-	  <None Remove="Resources\Themes\absa\header.png" />
-	  <None Remove="Resources\Themes\absa\logo1.png" />
-	  <None Remove="Resources\Themes\absa\logo_.png" />
-	  <None Remove="Resources\Themes\absa\reveal_bgsw.png" />
-	  <None Remove="Resources\Themes\absa\reveal_pl1.png" />
-	  <None Remove="Resources\Themes\absa\reveal_pl2.png" />
-	  <None Remove="Resources\Themes\absa\reveal_pl3.png" />
-	  <None Remove="Resources\Themes\absa\reveal_rhon.png" />
-	  <None Remove="Resources\Themes\absa\texts.json" />
-	  <None Remove="Resources\Themes\shell\Bus.gif" />
-	  <None Remove="Resources\Themes\shell\City.gif" />
-	  <None Remove="Resources\Themes\shell\female.png" />
-	  <None Remove="Resources\Themes\shell\male.png" />
-	  <None Remove="Resources\Themes\shell\Road.gif" />
-	  <None Remove="Resources\Themes\shell\texts.json" />
-	  <None Remove="Resources\Themes\shell\watch_start2.png" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<EmbeddedResource Include="Resources\Configs\nlog.android.config" />
 		<EmbeddedResource Include="Resources\Configs\nlog.config" />
 		<EmbeddedResource Include="Resources\Configs\nlog.ios.config" />
